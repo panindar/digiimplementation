@@ -3,17 +3,22 @@
 
 <head>
   <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+  crossorigin="anonymous"></script>
   <title>DIGI</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-  crossorigin="anonymous"></script>
 </head>
 
 <body>
   <app-root></app-root>
+  <div class="share_fm_dl_sm" id="attachment_poi"></div>
+  <script type="text/javascript" src="https://services.digitallocker.gov.in/requester/api/2/dl.js" id="dlshare"
+    data-app-id="C12C1CA5" data-app-hash="ac5b5289fdd9c7e5270f0bb286ec0a3282ffe78f5cb6a1abf6848a42b2e6bba5"
+    time-stamp=”Date.now()” data-callback="getData(res)">
+    </script>
 </body>
 
 </html>

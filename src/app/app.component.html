@@ -327,15 +327,15 @@
     </svg>
   </a>
 </div>
-<div class="share_fm_dl" id="attachment_poi">
-
   <div style="padding-top: 120px;">
     <input type="text" placeholder="username" />
   </div>
-</div>
-<script type="text/javascript" src="https://services.digitallocker.gov.in/requester/api/2/dl.js" id="dlshare"
-  data-app-id="YOUR_APP_ID" data-app-hash="YOUR_APP_HASH" time-stamp=”” data-callback="getData(res)">
-</script>
+  <div class="share_fm_dl_sm" id="attachment_poi"></div>
+  <script type="text/javascript" src="https://services.digitallocker.gov.in/requester/api/2/dl.js" id="dlshare"
+    [data-app-id]="clientid" [data-app-hash]="hashValue"
+    [time-stamp]=”timestamps” data-callback="getData(res)">
+    </script>
+ 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
