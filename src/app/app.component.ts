@@ -27,7 +27,7 @@ export class AppComponent {
     chatScript.setAttribute("src", "https://services.digitallocker.gov.in/requester/api/2/dl.js");
     chatScript.setAttribute("id", "dlshare");
     chatScript.setAttribute("data-app-id", this.clientid);
-    chatScript.setAttribute("data-app-hash", this.hashValue);
+    chatScript.setAttribute("data-app-hash", "this.hashValue");
     chatScript.setAttribute("time-stamp", this.timestamps);
     chatScript.setAttribute("data-callback", this.getData());
     document.body.appendChild(chatScript);
