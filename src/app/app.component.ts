@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'digi';
   clientid: string = "C12C1CA5";
   clientSecret: string = "56116ace7a8d60f585e8";
-  timestamps: string = Math.floor(Date.now()).toString();
+  timestamps: string = Math.floor(Date.now()/1000).toString();
   data: string=  this.clientSecret + this.clientid + this.timestamps;
   hashValue: any = shajs('sha256').update(this.data).digest('hex');
 
