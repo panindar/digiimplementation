@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { bindCallback } from 'rxjs';
 import * as shajs from 'sha.js';
 
 
@@ -13,7 +14,7 @@ export class AppComponent {
   clientSecret: string = "56116ace7a8d60f585e8";
   ts: string = Date.now.toString();
   timestamps: string = Math.floor(new Date().getTime() / 1000.0).toString();
-  data: string = this.clientSecret + this.clientid + this.timestamps;
+  data: string = this.clientid + this.clientSecret + this.timestamps;
   hashValue: string = shajs('sha256').update(this.data).digest('hex');
   plainText: string;
 
@@ -30,7 +31,7 @@ export class AppComponent {
     chatScript.setAttribute("data-app-id", this.clientid);
     chatScript.setAttribute("data-app-hash", this.hashValue);
     chatScript.setAttribute("time-stamp", this.timestamps);
-    chatScript.setAttribute("data-callback", this.getData(res));
+    chatScript.setAttribute("data-callback", this.getData());
     document.body.appendChild(chatScript);
   }
 
@@ -48,13 +49,11 @@ export class AppComponent {
     this.loadScript();
   }
 
-  getData(res: any) {
+  getData() {
     return "success";
-
   }
 }
 
-function res(res: any): string {
-  throw new Error('Function not implemented.');
-}
+
+
 
