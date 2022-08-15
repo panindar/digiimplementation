@@ -32,7 +32,7 @@ export class AppComponent {
     chatScript.setAttribute("data-app-hash", this.hashValue);
     chatScript.setAttribute("time-stamp", this.timestamps);
     chatScript.setAttribute("data-callback", this.getData());
-    document.body.appendChild(chatScript);
+    document.body.appendChild(chatScript)
   }
 
   constructor() {
